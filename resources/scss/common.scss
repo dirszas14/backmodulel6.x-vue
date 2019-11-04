@@ -1,0 +1,20 @@
+//// Necessary Modules
+@import 'basic/variables';
+@import '~bootstrap/scss/bootstrap'; // @import "../../../../node_modules/bootstrap/scss/bootstrap";
+// @import '~@fortawesome/fontawesome-free/css/all.min.css';
+// @import '../scss/libs/paperIcons';
+// @import '../scss/libs/roboto';
+@import '../scss/libs/animations';
+@import '~lightslider/dist/css/lightslider.min.css';// @import "../scss/libs/lightslider";
+@import "basic/responsive-helper"; // Should be at top of all other
+@import "basic/navDefault";
+@import 'basic/mixins';
+// @import "basic/icon";
+// @import "~themify-icons/themify-icons/themify-icons.scss";
+@import "basic/base";
+@import "basic/breadcrumbs";
+@import "basic/figure";
+@import "basic/preloader";
+@import "basic/social";
+@import "basic/helper";
+@import "libs/colors";
