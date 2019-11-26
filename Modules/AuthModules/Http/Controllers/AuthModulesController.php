@@ -25,15 +25,15 @@ class AuthModulesController extends Controller
      */
     public function login(Request $request)
     {
-        
         $email=$request->email;
         $password=$request->password;
         if (Auth::attempt(['email' => $email, 'password' => $password])) {
             return redirect('/dashboard');
-        } elseif (Auth::attempt(['email' => $email, 'password' => $password])){
-            Auth::logout();
-            return redirect('/login')->with('status','Akunmu telah disuspend! silahkan hubungi Administrator');
         }
+        //  elseif (Auth::attempt(['email' => $email, 'password' => $password])){
+        //     Auth::logout();
+        //     return redirect('/login')->with('status','Akunmu telah disuspend! silahkan hubungi Administrator');
+        // }
         else {
             return redirect('/login')->with('status','Email atau password salah!');
         }

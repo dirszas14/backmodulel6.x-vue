@@ -220,7 +220,7 @@
                 </li>
                 <!-- User Account-->
                 <li class="dropdown custom-dropdown user user-menu ">
-                <a href="{{route ('logout')}}" class="nav-link">
+                <a href="/auth/logout" class="nav-link">
                         {{-- <img src="assets/img/dummy/u8.png" class="user-image" alt="User Image"> --}}
                         {{-- <i class="icon-more_vert "></i> --}}Logout
                     </a>

@@ -11,10 +11,16 @@
 |
 */
 
+use Illuminate\Support\Facades\Auth;
+
 Route::post('auth/login','AuthModulesController@login');
 Route::group(['middleware' => ['auth']], function () {
     Route::prefix('auth')->group(function() {
         Route::get('/changepassword', 'AuthModulesController@changepassword');
         Route::post('/changepassword','AuthModulesController@postpassword');
+        Route::get('/logout',function(){
+            Auth::logout();
+            return redirect('/login');
+        });
     });
 });
