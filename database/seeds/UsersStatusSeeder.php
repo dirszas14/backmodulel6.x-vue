@@ -12,9 +12,10 @@ class UsersStatusSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('users_status')->insert(
+        DB::table('users_status')->insert([
         ['status_name'=>'actived'],
         ['status_name'=>'not actived'],
-        ['status_name'=>'suspend']);
+        ['status_name'=>'suspend']
+        ]);
     }
 }
