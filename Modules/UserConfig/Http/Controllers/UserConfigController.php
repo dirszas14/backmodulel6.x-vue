@@ -67,6 +67,8 @@ class UserConfigController extends Controller
             
             return $s;
         });
+        $crud->unsetAddFields(['email_verified_at','remember_token','created_at','updated_at']);
+        $crud->unsetEditFields(['email_verified_at','remember_token','created_at','updated_at','password']);
         // $crud->callbackColumn('company_name',function($value,$row){
         //     return "<a href='company/detail/$row->id'>$value</a>";
         // });
