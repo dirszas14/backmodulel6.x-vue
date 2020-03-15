@@ -60,6 +60,13 @@ class UserConfigController extends Controller
         $crud->displayAs([
             'roles_id'  =>'User Role'
         ]);
+        $crud->callbackAfterInsert(function($s){
+            $id=$s->insertId;
+            $password= Hash::make($s->data['password']);
+            User::where('id',$id)->update(['password'=>$password]);
+            
+            return $s;
+        });
         // $crud->callbackColumn('company_name',function($value,$row){
         //     return "<a href='company/detail/$row->id'>$value</a>";
         // });
