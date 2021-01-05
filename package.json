@@ -12,7 +12,7 @@
     "devDependencies": {
         "@fortawesome/fontawesome-free": "^5.7.2",
         "ajv-keywords": "^3.4.0",
-        "axios": "^0.17",
+        "axios": "^0.21",
         "babel-preset-react": "^6.23.0",
         "bootstrap": "^4.1.1",
         "bootstrap-colorpicker": "^2.5.2",
